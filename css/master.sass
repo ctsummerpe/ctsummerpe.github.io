@@ -1,43 +1,51 @@
-$font-stack: Roboto, sans-serif
-$primary-color: #336
-$background-color: #f7ffff
-$glo-background-color: #ddeeee
-$evidence-background-color: #d4ffd4
-
-=border-radius($radius)
-  -webkit-border-radius: $radius
-  -moz-border-radius: $radius
-  -ms-border-radius: $radius
-  border-radius: $radius
-
-h1
-  text-align: center
+$font-stack: 'Average', serif
+$primary-color: #eee
+$background-color: #333
+$glo-background-color: $background-color
+$evidence-background-color: $background-color
 
 body
   background-color: $background-color
+  font-family: $font-stack
+  color: $primary-color
+
+.time
+  font-family: 'Inconsolata', monospace
+  color: #ff8
+
+.climb
+  width: 300px
+  image-orientation: from-image
+
+.seven
+  width: 200px
 
 .container
-  font: 100% $font-stack
-  color: $primary-color
   margin-left: 40px
+  margin-right: 40px
 
   h1
     text-align: center
-    margin-bottom:
+    font-weight: normal
+    font-size: 36pt
+    color: #ff8
 
   h2
-    margin-top: 30px
+    margin-top: 10px
     margin-bottom: 10px
+    font-weight: normal
+    font-size: 24pt
+    color: #ff8
 
   p
     margin-top: 8px
     margin-bottom: 8px
+    font-size: 12pt
 
   .activity
     position: relative
 
   .box
-    +border-radius(20px)
     position: relative
     margin: 10px 0px
     padding: 5px 15px
@@ -45,16 +53,26 @@ body
     h3
       margin-top: 0px
       margin-bottom: 5px
+      font-size: 16pt
+      font-weight: normal
 
     p
       left: 0px
 
   .evidence
     @extend .box
-
     background-color: $evidence-background-color
+
+    h3
+      color: #ccf
+      font-style: italic
+
+    p
+      font-style: italic
 
   .glo
     @extend .box
-
     background-color: $glo-background-color
+
+    h3
+      color: #ccf
